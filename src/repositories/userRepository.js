@@ -1,13 +1,12 @@
-const users = [];
+import User from '#models/User.js';
 
 class UserRepository {
-  create(user) {
-    users.push(user);
-    return user;
+  async create(user) {
+    return User.create(user);
   }
 
-  findByUsername(username) {
-    return users.find((user) => user.username === username);
+  async findByUsername(username) {
+    return User.findOne({ where: { username } });
   }
 }
 

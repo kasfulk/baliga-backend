@@ -1,15 +1,12 @@
-const items = [
-  { id: 1, name: 'Item 1' },
-  { id: 2, name: 'Item 2' },
-];
+import Item from '#models/Item.js';
 
 class ItemRepository {
-  getAll() {
-    return items;
+  async getAll() {
+    return Item.findAll();
   }
 
-  getById(id) {
-    return items.find((item) => item.id === id);
+  async getById(id) {
+    return Item.findByPk(id);
   }
 }
 
