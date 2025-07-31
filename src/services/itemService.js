@@ -1,4 +1,4 @@
-import itemRepository from '@/repositories/itemRepository';
+import itemRepository from '#repositories/itemRepository.js';
 
 class ItemService {
   getAllItems() {

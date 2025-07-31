@@ -1,5 +1,5 @@
-import userService from '@/services/userService';
-import authService from '@/services/authService';
+import userService from '#services/userService.js';
+import authService from '#services/authService.js';
 
 class AuthController {
   async register(req, reply) {

@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import userRepository from '@/repositories/userRepository';
+import userRepository from '#repositories/userRepository.js';
 
 class UserService {
   async register(username, password) {

@@ -1,5 +1,5 @@
-import itemController from '@/controllers/itemController';
-import authMiddleware from '@/utils/authMiddleware';
+import itemController from '#controllers/itemController.js';
+import authMiddleware from '#utils/authMiddleware.js';
 
 async function itemRoutes(fastify, options) {
   fastify.addHook('preHandler', authMiddleware);

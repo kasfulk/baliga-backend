@@ -1,12 +1,13 @@
-import './config/moduleAlias.js';
+import itemRoutes from '#routes/itemRoutes.js';
+import authRoutes from '#routes/authRoutes.js';
+import publicRoutes from '#routes/publicRoutes.js';
 import fastify from 'fastify';
-import itemRoutes from '@/routes/itemRoutes';
-import authRoutes from '@/routes/authRoutes';
 
 const app = fastify({ logger: true });
 
 app.register(authRoutes, { prefix: '/api/auth' });
 app.register(itemRoutes, { prefix: '/api' });
+app.register(publicRoutes, { prefix: '/' });
 
 const start = async () => {
   try {

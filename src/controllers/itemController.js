@@ -1,4 +1,4 @@
-import itemService from '@/services/itemService';
+import itemService from '#services/itemService.js';
 
 class ItemController {
   getAllItems(req, reply) {

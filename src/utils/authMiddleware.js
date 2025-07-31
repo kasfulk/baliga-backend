@@ -1,4 +1,4 @@
-import authService from '@/services/authService';
+import authService from '#services/authService.js';
 
 function authMiddleware(req, reply, done) {
   const token = req.headers['authorization'];
